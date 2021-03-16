@@ -1,0 +1,71 @@
+		Ioan Mircea Petru 324CC
+
+--p1 
+	La primul subpunct am observat ca poate sa fie rezolvat printr-o formula,
+ raspunsul fiind 5 ^ (2 * (n - 1)).
+	Al doilea subpunct a fost rezolvat folosind programarea dinamica 
+ folosind formula dp[tip][i] = numarul in care poti sa aranjezi i bacnote astfel
+incat ultima sa fie de tip "tip", astfel numarul total de moduri este generat prin
+suma elementelor de pe ultima coloana.
+
+## Complexitate:
+
+	-timp:  -caz 1: `Theta(n)` generata de functia care genereaza 2^(n-1)
+		-caz 2: `Theta(n)`
+	-spatiu -caz 1: `Theta(1)`
+		-caz 2: `Theta(1)`
+
+--p2
+	Am creeat un struct in care am salvat inceputul si sfarsitul fiecarei
+ bucati de gard si le-am sortat dupa pozitia de inceput si am parcus vectorul, 
+ daca acesta are coordonata de sfarsit mai mare decat sfarsitul maxim parcurs 
+ pana la momentul dat. Am luat in considerare si daca gardul nu este continuu,
+ astfel modificand coordonatele extreme ale gardului.
+
+## Complexitate:
+
+	-timp: `Theta(n)` generata de parcurgerea vectorului cu coordonatele
+ gardului si `Theta(nlogn)` pentru sortare => `Theta(n(nlogn))`
+	-spatiu `Theta(n)` pentru vactorul in care am salvat coordonatele 
+
+--p3 
+	Am folosit o structura vector de tip pair pentru a salva numarul de 
+ bomboane care poate fii oferit fiecarui copil, am salvat pe prima linie pozitiile
+ din matrice corespunzatoare numarului de bomboane care pot fii oferite primului 
+ copil. Am parcurs matricea si ma completat elementele dupa formula 
+ table[i][j] += table[i-1][j-k] % mod, astfel raspunsul este in elementul de
+ de pe pozitia tabela[n][m].
+
+## Complexitate:
+
+	-timp: `Theta(n)` pentru comletarea primei linii din matrice + 
+		`Theta(n*m)` pentru parcurgerea matricei => `Theta((m+1)*n)`
+	-spatiu `Theta(n*m)` pentru matricea in care calculez numarul de 
+		bomboane si `Theta(n)` pentru vectorul de copii => `Theta((m+1)*n)`
+
+--p4
+	Folosind metoda greedy am sortat descrescator dupa greutate vectorul.
+ Am observat ca putem genera numarul cerut daca in momentul in care greutatea 
+ actuala este folosita ca si greutate minima, astfel am folosit un container de
+ multiset pentru a stoca cele m repetari cu valoare maxima.
+
+## Complexitate:
+
+	-timp: `Theta(nlogn)` pentru sortare + `Theta(n * m)` rezultat din 
+		calcularea numarului maxim de repetari.
+	-spatiu `Theta(n)` pentru containerul multiset + `Theta(n)` pentru 
+		vectorul in care am salvat datele de intrare => `Theta(n)`
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+./bani.cpp:36:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./bani.cpp:37:  Should have a space between // and comment  [whitespace/comments] [4]
+Done processing ./sala.cpp
+Done processing ./_utils/verif.cpp
+Done processing ./gard.cpp
+Done processing ./bani.cpp
+Done processing ./bomboane.cpp
+Total errors found: 2
